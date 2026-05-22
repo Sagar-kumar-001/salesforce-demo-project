@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Combo Box Demo">
+        <lightning-combobox 
+                label="Status"
+                placeholder="Select Status"
+                options={options}
+                value={value}
+                onchange={handleChange}>
+        </lightning-combobox>
+        <p>Value of Selected Option is:{value}</p>
+        <template if:true={showtable}>
+            <lightning-datatable
+                key-field="id"
+                columns={columns}
+                data={data}>
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>

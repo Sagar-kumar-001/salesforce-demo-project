@@ -1,0 +1,24 @@
+<template>
+    <lightning-card label="Subscriber Component" icon-name="standard:account">
+        <p>Selected Account Id: <strong>{Id}</strong></p><br>
+        <b>Related Contacts:</b>
+        <template if:true={contacts.length}>
+            <table border="1px solid black">
+                <tr>
+                    <th>Contact Name</th>
+                    <th>Email</th>
+                </tr>
+                <template for:each={contacts} for:item="contact">
+                    <tr key={contact.Id}>
+
+                        <td>{contact.Name}</td>
+                        <td>{contact.Email}</td>
+                    </tr>
+                </template>
+            </table>
+        </template>
+        <template if:false={contacts.length}>
+            <div>No Contacts</div>
+        </template>
+    </lightning-card>
+</template>

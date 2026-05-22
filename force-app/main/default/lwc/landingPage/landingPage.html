@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="Leave Management System">
+        <div class="slds-p-around_medium">
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col">
+                    <lightning-button 
+                        label="Apply Leave" 
+                        onclick={showApplyLeave}
+                        variant={applyLeaveVariant}>
+                    </lightning-button>
+                </div>
+                <div class="slds-col">
+                    <lightning-button 
+                        label="Approve/Reject" 
+                        onclick={showApproveReject}
+                        variant={approveRejectVariant}>
+                    </lightning-button>
+                </div>
+                <div class="slds-col">
+                    <lightning-button 
+                        label="Leave Status" 
+                        onclick={showLeaveStatus}
+                        variant={leaveStatusVariant}>
+                    </lightning-button>
+                </div>
+            </div>
+
+            <div class="slds-m-top_medium">
+                <template if:true={showApplyComponent}>
+                    <c-apply-leave onsuccess={handleSuccess} oncancel={hideAll}></c-apply-leave>
+                </template>
+
+                <template if:true={showApproveComponent}>
+                    <c-approve-reject oncomplete={hideAll}></c-approve-reject>
+                </template>
+
+                <template if:true={showStatusComponent}>
+                    <c-leave-status onback={hideAll}></c-leave-status>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

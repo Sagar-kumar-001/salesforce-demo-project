@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Child Component" icon-name="standard:apex_plugin_outline">
+        <lightning-button label="Decrease" name="decrease" onclick={handleDec}></lightning-button>
+        <lightning-button label="Increase" name="increase" onclick={handleInc}></lightning-button>
+        <lightning-button label="X2" value=2 onclick={handleMultiply}></lightning-button>
+        <lightning-button label="X3" value=3 onclick={handleMultiply}></lightning-button>
+        <p data-name="para">Hello I am under Child component</p>
+        <lightning-button label="Click Me" onclick={handleClick}></lightning-button>
+        <p>{textValue}</p>
+    </lightning-card>
+</template>

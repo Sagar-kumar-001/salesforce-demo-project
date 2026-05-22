@@ -1,0 +1,20 @@
+<template>
+    <lightning-card>
+        <div>
+            <lightning-input label="Enter First Number" type="number" value={firstNumber} onchange={handleNum1}></lightning-input>
+    
+            <lightning-input label="Enter Second Number" type="number" value={secondNumber} onchange={handleNum2}></lightning-input>
+    
+            <div>
+                <lightning-button label="Add" onclick={handleAdd}></lightning-button>
+                <lightning-button label="Subtract" onclick={handleSubtract}></lightning-button>
+                <lightning-button label="Multiply" onclick={handleMultiply}></lightning-button>"
+            </div>
+    
+            <div>
+                <p><Strong>Result:</Strong> {result}</p>
+            </div>
+        </div>
+    </lightning-card>
+    
+</template>

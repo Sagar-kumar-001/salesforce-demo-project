@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Create Account">
+        <lightning-input label="Account Name" onchange={handleChange} name="accountName" value={accountName}></lightning-input>
+        <lightning-input label="Phone" onchange={handleChange} name="phone" value={phone}></lightning-input>
+        <lightning-input label="Website" onchange={handleChange} name="website" value={website}></lightning-input>
+        <lightning-input label="Annual Revenue" type="number" onchange={handleChange} name="annualRevenue" value={annualRevenue}></lightning-input>
+        <lightning-input label="Billing City" onchange={handleChange} name="billingCity" value={billingCity}></lightning-input>
+        <lightning-button label="Create" onclick={handleClick}></lightning-button>
+    </lightning-card>
+</template>

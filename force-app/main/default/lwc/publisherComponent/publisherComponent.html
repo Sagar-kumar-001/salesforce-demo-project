@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Publisher Component" icon-name="standard:account">
+        <h1>{userId}</h1>
+        <lightning-combobox
+           name="account"
+           placeholder="Select an Account"
+           options={accountOptions}
+           onchange={handleChange}
+           label="Select Account"
+           value={selectedAccountId}>
+        </lightning-combobox>
+        <lightning-button label="Publish" onclick={handleClick}></lightning-button>
+    </lightning-card>
+</template>

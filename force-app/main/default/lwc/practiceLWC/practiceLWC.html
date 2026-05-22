@@ -1,0 +1,14 @@
+<template>
+    <h1>Practice LWC Header</h1>
+        <lightning-card>
+            <lightning-input type="search" onchange={handleChange} placeholder="Search name here..."></lightning-input>
+            <!-- <p>{contact}</p> -->
+            <template lwc:if={contacts}>
+                <lightning-datatable
+                    key-field="id"
+                    data={contacts}
+                    columns={columns}
+                ></lightning-datatable>
+            </template>
+        </lightning-card>
+</template>

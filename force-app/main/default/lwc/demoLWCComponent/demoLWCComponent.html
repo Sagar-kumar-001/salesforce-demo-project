@@ -1,0 +1,21 @@
+<template>
+    <div>
+        <b>Sagar Kumar</b>
+    </div>
+
+    <div>
+        <lightning-input label="Enter First Number" type="number" value={firstNumber} onchange={handleOnChange}></lightning-input>
+
+        <lightning-input label="Enter Second Number" type="number" value={secondNumber} onchange={handleOnChange}></lightning-input>
+
+        <div>
+            <lightning-button label="Add" onclick={handleAdd}></lightning-button>
+            <lightning-button label="Subtract" onclick={handleSubtract}></lightning-button>
+            <lightning-button label="Multiply" onclick={handleMultiply}></lightning-button>"
+        </div>
+
+        <div>
+            <p>Result: {result}</p>
+        </div>
+    </div>
+</template>

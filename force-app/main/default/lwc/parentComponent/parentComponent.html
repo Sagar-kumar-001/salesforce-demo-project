@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Parent Component">
+        <p>Count: {countValue}</p>
+        <p data-id="p2"></p>
+        <p data-id="p3">Hello I am in Parent component</p>
+        <lightning-button label="Click Me" onclick={handleClick2}></lightning-button>
+        <c-child-component
+                        onsubtract={handleSub}
+                        onadd={handleAdd}
+                        onmultiply={handleMultiply}
+                        onbuttonclick={handleClick}
+                        text-value={text}
+                        ></c-child-component>
+    </lightning-card>
+</template>

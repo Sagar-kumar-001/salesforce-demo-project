@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Account List" icon-name="standard:account">
+        <lightning-datatable
+            key-field="Id"
+            data={data}
+            columns={columns}
+            onrowselection={handleRowSelection}
+            draft-values={draftValues}
+            show-row-number-column=""
+            onsave={handleSave}>
+        </lightning-datatable>
+
+        <div class="slds-m-top_medium slds-align_absolute-center">
+            <lightning-button
+                label="Delete Selected"
+                variant="destructive"
+                onclick={handleDelete}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

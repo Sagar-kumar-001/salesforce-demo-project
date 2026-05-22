@@ -1,0 +1,76 @@
+<!-- <template>
+    <lightning-card title="File Upload Example" icon-name="standard:file">
+        <div class="slds-p-around_medium">
+            <lightning-input
+                type="file"
+                label="Upload Files"
+                accept={acceptedFormats}
+                multiple
+                onchange={handleFileChange}
+            ></lightning-input>
+            
+            <div class="slds-m-top_medium">
+                <lightning-button
+                    label="Upload Files"
+                    variant="brand"
+                    onclick={handleUpload}
+                    disabled={isUploadDisabled}
+                ></lightning-button>
+            </div>
+            
+            <template if:true={files}>
+                <div class="slds-m-top_medium">
+                    <h3 class="slds-text-heading_small">Selected Files:</h3>
+                    <ul>
+                        <template for:each={files} for:item="file">
+                            <li key={file.name} class="slds-p-vertical_xx-small">
+                                {file.name} ({file.size} bytes)
+                                <template if:true={file.error}>
+                                    <span class="slds-text-color_error"> - {file.error}</span>
+                                </template>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+            </template>
+            
+            <template if:true={uploadResults}>
+                <div class="slds-m-top_medium">
+                    <h3 class="slds-text-heading_small">Upload Results:</h3>
+                    <ul>
+                        <template for:each={uploadResults} for:item="result">
+                            <li key={result.name} class="slds-p-vertical_xx-small">
+                                {result.name} - 
+                                <template if:true={result.success}>
+                                    <span class="slds-text-color_success">Success</span>
+                                </template>
+                                <template if:false={result.success}>
+                                    <span class="slds-text-color_error">Failed: {result.error}</span>
+                                </template>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template> -->
+
+
+<template>
+    <lightning-card title="Upload Files (Max 200KB each)">
+        <div class="slds-p-around_medium">
+            <lightning-input type="file" 
+                             label="Select Files" 
+                             multiple 
+                             onchange={handleFileChange}>
+            </lightning-input>
+
+            <lightning-button label="Upload" 
+                              variant="brand" 
+                              class="slds-m-top_medium"
+                              onclick={uploadFiles}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

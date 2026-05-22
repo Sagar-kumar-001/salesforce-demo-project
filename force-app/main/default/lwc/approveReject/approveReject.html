@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Pending Leave Approvals" icon-name="standard:timesheet">
+        <div class="slds-p-around_medium">
+            <!-- Loading State -->
+            <template if:true={isLoading}>
+                <div class="slds-align_absolute-center slds-p-around_large">
+                    <lightning-spinner alternative-text="Loading"></lightning-spinner>
+                </div>
+            </template>
+
+            <!-- Data Table -->
+            <template if:false={isLoading}>
+                <template if:true={pendingLeavesData.length}>
+                    <lightning-datatable
+                        key-field="Id"
+                        data={pendingLeavesData}
+                        columns={columns}
+                        onrowaction={handleRowAction}
+                        hide-checkbox-column
+                        show-row-number-column>
+                    </lightning-datatable>
+                </template>
+
+                <!-- Empty State -->
+                <template if:false={pendingLeavesData.length}>
+                    <div class="slds-align_absolute-center slds-p-around_large">
+                        <p>No pending leave requests found</p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

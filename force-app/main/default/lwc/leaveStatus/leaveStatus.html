@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Leave Status">
+        <lightning-combobox
+            label="Select Employee"
+            placeholder="Select an employee"
+            options={employeeOptions}
+            value={selectedEmployeeId}
+            onchange={handleEmployeeChange}>
+        </lightning-combobox>
+
+        <lightning-datatable
+            key-field="Id"
+            data={leaveHistory}
+            columns={columns}>
+        </lightning-datatable>
+
+        <div class="slds-m-top_medium">
+            <lightning-button label="Back" onclick={handleBack}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
