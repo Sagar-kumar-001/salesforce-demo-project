@@ -119,6 +119,7 @@ public with sharing class CaseTriggerHandler {
 
         Map<Id, String> accIdToLatestCaseInfo = new Map<Id, String>();
         for (Id caseId : caseIdSet) {
+            System.debug('Hello Hello');
             if (caseIdToAccountIdMap.containsKey(caseId)) {
                 Id accId = caseIdToAccountIdMap.get(caseId);
                 String caseInfo = 'Case Number: ' + caseIdToNumberMap.get(caseId) + ' --> Status: ' + caseIdToStatusMap.get(caseId);
