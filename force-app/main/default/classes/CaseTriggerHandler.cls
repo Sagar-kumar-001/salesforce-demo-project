@@ -2,8 +2,8 @@
  * @description       : 
  * @author            : Sagar
  * @group             : 
- * @last modified on  : 02-26-2026
- * @last modified by  : Sagar
+ * @last modified on  : 05-22-2026
+ * @last modified by  : 
 **/
 public with sharing class CaseTriggerHandler {
 
@@ -90,7 +90,7 @@ public with sharing class CaseTriggerHandler {
     public static void updateTaskStatusAndAccountDescOnCaseStatusUpdation(List<Case> newCaseList, Map<Id, Case> oldMap) {
         Set<Id> caseIdSet = new Set<Id>();
         Set<Id> accIdSet = new Set<Id>();
-        
+        System.debug('Checking for Git');
         for (Case c : newCaseList) {
             if (!oldMap.isEmpty() && c.Status != oldMap.get(c.Id).Status && c.AccountId != null) {
                 caseIdSet.add(c.Id);
